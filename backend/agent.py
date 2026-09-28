@@ -27,6 +27,10 @@ _APPROACH_KEYWORDS = {
     "lean core package": ["lean core", "lean-core"],
 }
 
+_KNOWN_RESOLUTIONS = {
+    "security-first": "RFP-019",
+}
+
 
 def _label(text: str) -> str:
     """Prefix a recalled memory with the bid it is about, or say we can't tell."""
@@ -60,11 +64,22 @@ def _known_conflicts() -> list[str]:
         lost = [r for r in records if r["outcome"].lower() == "lost"]
         if won and lost:
             w, l = won[0], lost[0]
+            
             lines.append(
+                
                 f"Approach '{tag}' WON {w['rfp_id']} ({w['client_name']}) "
                 f"but LOST {l['rfp_id']} ({l['client_name']}): "
                 f"win reason - {w['client_reason']}; loss reason - {l['client_reason']}."
             )
+            if tag in _KNOWN_RESOLUTIONS:
+                res_id = _KNOWN_RESOLUTIONS[tag]
+                res = next((x for x in _RFPS if x["rfp_id"] == res_id), None)
+                if res:
+                    lines.append(
+                        f"RESOLVED BY {res['rfp_id']} ({res['client_name']}): "
+                        f"WON using '{tag}' delivered as {res['proposal_strategy']} "
+                        f"- reason: {res['client_reason']}."
+                    )
     return lines
 
 
@@ -103,7 +118,10 @@ NEW RFP:
 {rfp}
 
 PAST MEMORIES:KNOWN CONTESTED APPROACHES (verified from our records; use these real ids directly
-and explain the deciding factor in your own words):
+and explain the deciding factor in your own words). Some entries include a line
+starting with "RESOLVED BY" naming a later bid that reconciled the contradiction —
+when present, use it to explain HOW the approach was adapted to win, not just that
+the two bids disagreed:
 {known_conflicts}
 {memories}
 
@@ -113,8 +131,9 @@ Return ONLY JSON in this shape:
     {{"risk": "...", "evidence": ["RFP-011"], "why_it_matters": "...", "mitigation": "..."}}
   ],
   "conflicts": [
-    {{"claim": "...", "evidence_for": ["RFP-003"], "evidence_against": ["RFP-011"], "deciding_factor": "..."}}
-  ]
+      {{"claim": "...", "evidence_for": ["RFP-003"], "evidence_against": ["RFP-011"], 
+"deciding_factor": "...", "resolution": "RFP-019 or null if unresolved"}}
+    ]
 }}
 """
 
