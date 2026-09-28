@@ -1,55 +1,73 @@
-﻿ERROR: None
+ERROR: None
 INVENTED IDS: []
-RISK EVIDENCE: [['RFP-011'], ['RFP-005'], ['RFP-015']]
-CONFLICTS: [(['RFP-019'], ['RFP-011']), (['RFP-022'], ['RFP-015'])]
+RISK EVIDENCE: [['RFP-011'], ['RFP-005'], ['RFP-015'], ['RFP-020']]
+CONFLICTS: [(['RFP-003'], ['RFP-011']), (['RFP-007'], ['RFP-020']), (['RFP-022'], ['RFP-015'])]
 -----
 {
   "risks": [
     {
-      "risk": "Inability to meet the hard 90ΓÇæday goΓÇælive deadline",
+      "risk": "Failure to meet the hard 90-day go-live deadline",
       "evidence": [
         "RFP-011"
       ],
-      "why_it_matters": "Lakeview Clinics requires the patient intake and billing platform to be live in 90 days; missing this deadline caused a loss on a similar healthcare bid.",
-      "mitigation": "Adopt a phased rollout that delivers a secure core within 60 days (as done in RFP-019) and clearly articulate the phased schedule in the proposal."
+      "why_it_matters": "Cedar Ridge Medical Group rejected our proposal because a seven-month implementation plan could not satisfy their 90-day clinic opening requirement. The new RFP also specifies a hard 90-day go-live, so missing this deadline will likely cause an immediate loss.",
+      "mitigation": "Adopt a phased-core rollout that delivers the essential intake and billing functions within 60-90 days (as done in RFP-019), and clearly communicate the phased schedule and contingency resources."
     },
     {
-      "risk": "Insufficient security and compliance documentation (HIPAA, audit readiness)",
+      "risk": "Insufficient security documentation for HIPAA-compliant platform",
       "evidence": [
         "RFP-005"
       ],
-      "why_it_matters": "The client operates in healthcare and will scrutinize HIPAA compliance, BAA readiness, and audit logs; a weak security response led to a loss on a comparable bid.",
-      "mitigation": "Include a detailed control matrix, penetrationΓÇætest summary, BAA offer, and SOCΓÇ»2 evidence, mirroring the approach that won RFP-003 and RFP-019."
+      "why_it_matters": "Halden Trust Bank rejected our bid because the security response lacked a control matrix, penetration-test report, and completed vendor questionnaire. Healthcare clients will scrutinize the same artifacts for HIPAA compliance.",
+      "mitigation": "Include a detailed control-by-control compliance matrix, recent pen-test summary, and a ready-to-sign Business Associate Agreement in the proposal, mirroring the successful security-first approach of RFP-003."
     },
     {
-      "risk": "Support model perceived as an extraΓÇæcost addΓÇæon",
+      "risk": "24/7 support offered only as an add-on, appearing less committed and more costly",
       "evidence": [
         "RFP-015"
       ],
-      "why_it_matters": "Competitors bundled 24/7 support with a oneΓÇæhour response SLA in the base price, making our proposal look more expensive and less committed.",
-      "mitigation": "Bundle 24/7 support with a oneΓÇæhour SLA in the base price, as was successful in RFP-022."
+      "why_it_matters": "Ironwood Cargo Lines chose a competitor that bundled 24/7 support with a one-hour response SLA in the base price, while our add-on model made us look more expensive and less dedicated. A patient intake system will likely need round-the-clock support for billing issues.",
+      "mitigation": "Bundle 24/7 support with a defined SLA (e.g., one-hour response) into the base price, following the winning model of RFP-022."
+    },
+    {
+      "risk": "Absence of a custom ROI model that enables the client to build a business case",
+      "evidence": [
+        "RFP-020"
+      ],
+      "why_it_matters": "Thornbury Advisory Partners could not construct a business case from our proposal, leading to a loss. Even mid-market healthcare clients often need to justify capital spend to finance or executive committees.",
+      "mitigation": "Develop a tailored ROI calculator that ties pricing to projected billing volume, reduced claim processing time, and recovered revenue, as demonstrated in the winning strategy for RFP-007."
     }
   ],
   "conflicts": [
     {
-      "claim": "A phased implementation can satisfy the 90ΓÇæday goΓÇælive requirement",
+      "claim": "A security-first approach improves win probability",
       "evidence_for": [
-        "RFP-019"
+        "RFP-003"
       ],
       "evidence_against": [
         "RFP-011"
       ],
-      "deciding_factor": "RFP-019 demonstrated that delivering a secure core in 60 days via a phased plan met the clientΓÇÖs timeline, whereas RFP-011ΓÇÖs singleΓÇæphase 7ΓÇæmonth plan failed."
+      "deciding_factor": "The win (RFP-003) occurred because the client's timeline was flexible, allowing the security review to add value. The loss (RFP-011) happened when the client required a 90-day go-live; the longer security-focused timeline missed the deadline, so security strength could not compensate."
     },
     {
-      "claim": "Including 24/7 support in the base price improves win probability",
+      "claim": "Premium pricing combined with a custom ROI model drives wins",
+      "evidence_for": [
+        "RFP-007"
+      ],
+      "evidence_against": [
+        "RFP-020"
+      ],
+      "deciding_factor": "RFP-007 succeeded because the ROI model let the client see a clear financial benefit and the premium tier signaled quality. RFP-020 failed because the client could not build a business case from our proposal, showing that without a convincing ROI model premium pricing alone is insufficient."
+    },
+    {
+      "claim": "Bundling 24/7 support in the base price increases win chances",
       "evidence_for": [
         "RFP-022"
       ],
       "evidence_against": [
         "RFP-015"
       ],
-      "deciding_factor": "RFP-022 won by offering 24/7 support with a oneΓÇæhour SLA as part of the base package, while RFP-015 lost because support was a paid addΓÇæon, making the proposal appear pricier."
+      "deciding_factor": "RFP-022 won by offering 24/7 support with a one-hour response SLA as part of the base price, matching the client's operational needs. RFP-015 lost because 24/7 support was an add-on, making the proposal appear more expensive and less committed."
     }
   ],
   "ids_in_memory": [

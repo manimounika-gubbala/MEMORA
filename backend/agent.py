@@ -118,6 +118,25 @@ Return ONLY JSON in this shape:
 }}
 """
 
+_CHAR_FIXES = {
+    "\u2011": "-", "\u2010": "-", "\u2013": "-",
+    "\u2014": " - ",
+    "\u2018": "'", "\u2019": "'",
+    "\u201c": '"', "\u201d": '"',
+    "\u00a0": " ",
+}
+
+def _clean_obj(x):
+    """Normalize typographic characters in every string of a parsed result."""
+    if isinstance(x, str):
+        for bad, good in _CHAR_FIXES.items():
+            x = x.replace(bad, good)
+        return x
+    if isinstance(x, list):
+        return [_clean_obj(i) for i in x]
+    if isinstance(x, dict):
+        return {k: _clean_obj(v) for k, v in x.items()}
+    return x
 
 def _ask_llm(prompt: str, retries: int = 3) -> dict:
     last = None
@@ -159,7 +178,7 @@ def premortem(rfp: dict) -> dict:
     result["invented_ids"] = sorted(cited - real)
     result["memories_used"] = memories
 
-    return result
+    return _clean_obj(result)
 
 def record_outcome(rfp: dict, outcome: str, reason: str) -> None:
     """Write the result of a bid back into memory so the next pre-mortem is smarter."""
