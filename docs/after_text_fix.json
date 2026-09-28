@@ -1,0 +1,65 @@
+﻿{
+  "risks": [
+    {
+      "risk": "Inability to meet the hard 90\u2011day go\u2011live deadline",
+      "evidence": [
+        "RFP-011"
+      ],
+      "why_it_matters": "Cedar Ridge Medical Group rejected our bid because our seven\u2011month implementation timeline missed their 90\u2011day clinic opening requirement. Lakeview Clinics has the same hard deadline, so a delayed rollout would likely cause the bid to be rejected.",
+      "mitigation": "Plan a phased, pilot\u2011first rollout with dedicated implementation resources, a detailed project schedule, and weekly executive checkpoints to ensure the core patient intake and billing functionality is live within 90 days."
+    },
+    {
+      "risk": "Insufficient security and compliance documentation (HIPAA, encryption, audit logging)",
+      "evidence": [
+        "RFP-005",
+        "RFP-011"
+      ],
+      "why_it_matters": "Both the Halden Trust Bank and Cedar Ridge Medical Group bids were lost because the security response did not satisfy the client\u2019s risk or regulatory teams. The new healthcare project will require HIPAA compliance, encryption, and audit logging, making a weak security package a deal\u2011breaker.",
+      "mitigation": "Include a full control\u2011by\u2011control compliance matrix, SOC\u202f2 report, recent penetration\u2011test summary, BAA offering, and data\u2011residency statement in the base proposal; attach evidence of prior successful security audits."
+    }
+  ],
+  "conflicts": [
+    {
+      "claim": "A comprehensive security package drives win probability",
+      "evidence_for": [
+        "RFP-014"
+      ],
+      "evidence_against": [
+        "RFP-005"
+      ],
+      "deciding_factor": "RFP\u2011014 was won after rebuilding the security package (control matrix, SOC\u202f2, pen\u2011test summary, data\u2011residency statement), whereas RFP\u2011005 was lost because the security response was deemed insufficient. The presence of detailed, audit\u2011ready security artifacts is the differentiator."
+    }
+  ],
+  "ids_in_memory": [
+    "RFP-002",
+    "RFP-005",
+    "RFP-011",
+    "RFP-014",
+    "RFP-015",
+    "RFP-018",
+    "RFP-021"
+  ],
+  "invented_ids": [],
+  "memories_used": [
+    "Lost the bid because the security response was deemed insufficient by the client's risk team. | When: 2025-12-12 | Involving: Halden Trust Bank | Competitor provided comprehensive security documentation including a control matrix and pen test report.",
+    "The team has adopted a policy to proactively include 24/7 support in the base offer for clients with non-standard operating hours, following lessons learned from RFP-015.",
+    "Lost RFP-011 for Cedar Ridge Medical Group due to a seven-month implementation timeline that failed to meet the 90-day clinic opening deadline. | When: 2026-03-10 | Involving: Cedar Ridge Medical Group | Competitor promised a 90-day secure core delivery.",
+    "The deal was won by switching from a 25% discount strategy to a premium tier pricing model justified by an ROI model based on the client's own utilisation figures. | When: 2026-01-16 | Involving: Ashford & Lyle Consulting Group | The client questioned the initial low price and potential impact on support quality.",
+    "Lost RFP-011 for Cedar Ridge Medical Group, a $210,000 mid-market project, because the seven-month implementation timeline failed to meet the client's 90-day go-live deadline, while a competitor promised a 90-day secure core delivery; project requirements included HIPAA compliance, encryption, EHR integration, and staff training.",
+    "Lost RFP-005 for Halden Trust Bank, a $380,000 enterprise banking project, because the security response was deemed insufficient by the client's risk team, who required KYC/AML automation, in-country data residency, penetration testing evidence, and SSO to address regulatory scrutiny; a competitor won by providing comprehensive security documentation including a control matrix and pen test report.",
+    "Won the RFP due to a security-first proposal featuring control-by-control compliance mapping, proactive BAA offering, and a recent penetration test summary. | When: 2025-11-14 | Involving: Meridian Valley Health System | Security team confidence in control mapping and BAA readiness.",
+    "The winning proposal included 24/7 support with a one-hour response SLA and a phased depot rollout to address the client's need for early morning and late evening shift coverage. | When: 2026-08-07 | Involving: Coastline Distribution Group | Client required support outside standard business hours and a low-risk implementation.",
+    "Lost RFP-021 for Quantforge Software, a SaaS technology company seeking a customer success platform, because the 90-page proposal was too complex with four modules and multiple pricing scenarios, making it difficult for the evaluation committee to compare against competitors; the client required CRM integration, data warehouse integration, SSO, and customer health scoring.",
+    "Bayshore Regional Health required HIPAA compliance, audit logging, EHR integration, and core functionality within 60 days. | Involving: Bayshore Regional Health",
+    "The proposal for RFP-014 was successful because the team rebuilt the security package and integration plan to satisfy the client's risk committee. | When: 2026-04-21 | Involving: Lakemont Federal Credit Union | The client required stronger security guarantees and regulatory compliance.",
+    "Juniper Lane Outfitters chose the proposal due to the committed six-week go-live date and fixed all-in price, despite a competitor offering a lower price. | When: 2026-02-11 | Involving: Juniper Lane Outfitters | Customer prioritized speed to go-live and predictable costs over the lowest price.",
+    "Corvane Precision Manufacturing's primary concerns included production downtime during rollout and the risk of one plant delaying others due to process variations. | Involving: Corvane Precision Manufacturing",
+    "The proposal was reworked into a three-phase rollout (pilot depot, two more depots, full network) with integrated driver training to address client concerns about implementation clarity and operational disruption. | Involving: Trailhead Freight Solutions | Client feedback during the clarification round indicated the initial proposal was unclear.",
+    "The bid for RFP-018 failed because the executive summary did not address the client's primary requirement of data residency, whereas competitors addressed it on the first page. | When: 2026-06-13 | Involving: Kestrel Bancorp | The proposal focused on integration and analytics strengths instead of the client's critical data residency and auditability concerns.",
+    "Pebble & Pine Market required a returns portal, simple setup, low monthly cost, and no long-term contract. | Involving: Pebble & Pine Market | Client concerns regarding cash flow and business flexibility.",
+    "The security package for RFP-014 included a control matrix, SOC 2 report, pen test summary, and data residency statement, applying lessons learned from RFP-005. | When: 2026-04-21 | To address client concerns regarding regulatory scrutiny and data protection.",
+    "The proposal won due to an evidence-led approach, specifically providing load test results at twice the projected volume and a reference architecture that outperformed competitors. | When: 2026-02-25 | Involving: Skyreach Communications | Addressed customer concerns regarding performance degradation at peak load and scalability.",
+    "RFP-011 requirements included HIPAA compliance, encryption, EHR integration, 90-day go-live, and staff training for a $210,000 mid-market project. | Involving: Cedar Ridge Medical Group",
+    "Lost RFP-002 for Harlow & Finch Home Goods, a 40-store retail chain, because the competitor offered a 30% cheaper package with an 8-week go-live, while the company's full-featured proposal with bundled analytics had a 14-week timeline."
+  ]
+}

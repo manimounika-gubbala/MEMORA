@@ -1,0 +1,20 @@
+﻿
+Q: What proposal strategy did we use for RFP-011 Cedar Ridge Medical Group?
+- The company's strategy for RFP-013 was to propose a standard product with configuration options, declining custom development to protect the project timeline. | Involving: user
+- The project approach for RFP-016 uses a lean-core strategy with a three-wave phased store rollout, weekly milestones, and a firm eight-week completion commitment.
+- Lost RFP-011 for Cedar Ridge Medical Group, a $210,000 mid-market project, because the seven-month implementation timeline failed to meet the client's 90-day go-live deadline, while a competitor promised a 90-day secure core delivery; project requirements included HIPAA compliance, encryption, EHR i
+- Lost RFP-011 for Cedar Ridge Medical Group due to a seven-month implementation timeline that failed to meet the 90-day clinic opening deadline. | When: 2026-03-10 | Involving: Cedar Ridge Medical Group | Competitor promised a 90-day secure core delivery.
+- RFP-011 requirements included HIPAA compliance, encryption, EHR integration, 90-day go-live, and staff training for a $210,000 mid-market project. | Involving: Cedar Ridge Medical Group
+- Won RFP-016 for Ridgeway Sporting Goods, a mid-market retail chain, for $72,000, by proposing a lean-core strategy with a three-wave phased store rollout, weekly milestones, and a firm eight-week completion commitment, which the client prioritized over a lower competitor price.
+- The proposal for RFP-014 was successful because the team rebuilt the security package and integration plan to satisfy the client's risk committee. | When: 2026-04-21 | Involving: Lakemont Federal Credit Union | The client required stronger security guarantees and regulatory compliance.
+- The company's proposal for RFP-015 included business-hours support as standard and 24/7 support as a paid add-on.
+
+Q: What proposal strategy did we use for RFP-003 Meridian Valley Health System?
+- Won RFP-003 for Meridian Valley Health System, a $240,000 enterprise contract for a patient scheduling and referral management platform, by proposing a security-first strategy featuring control-by-control compliance mapping, a proactive BAA offering, and a recent penetration test summary; the projec
+- Won RFP-003 for Meridian Valley Health System, a $240,000 enterprise contract for a patient scheduling and referral management platform. | When: 2025-11-14 | Involving: Meridian Valley Health System
+- Won the RFP due to a security-first proposal featuring control-by-control compliance mapping, proactive BAA offering, and a recent penetration test summary. | When: 2025-11-14 | Involving: Meridian Valley Health System | Security team confidence in control mapping and BAA readiness.
+- The company's strategy for RFP-013 was to propose a standard product with configuration options, declining custom development to protect the project timeline. | Involving: user
+- Key requirements for the project included HIPAA compliance with a signed BAA, SOC 2 Type II report, encryption, audit logging, and EHR integration. | Involving: Meridian Valley Health System
+- Won RFP-006 for Trailhead Freight Solutions, a $120,000 logistics contract, by proposing a three-phase rollout (pilot depot, two more depots, full network) with integrated driver training and a fixed-price pilot to address concerns about implementation clarity and operational risk.
+- The pricing structure for RFP-006 uses a fixed-price pilot for phase one with priced options for subsequent phases to lower perceived risk. | Involving: Trailhead Freight Solutions
+- Proposed a lean core package with prebuilt connectors and weekly milestones, applying lessons learned from RFP-002. | To ensure a six-week go-live and address concerns about software complexity.

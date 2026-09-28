@@ -1,0 +1,105 @@
+﻿ERROR: None
+INVENTED IDS: []
+RISK EVIDENCE: [['RFP-011'], ['RFP-005'], ['RFP-015']]
+CONFLICTS: [(['RFP-019'], ['RFP-011']), (['RFP-022'], ['RFP-015'])]
+-----
+{
+  "risks": [
+    {
+      "risk": "Inability to meet the hard 90ΓÇæday goΓÇælive deadline",
+      "evidence": [
+        "RFP-011"
+      ],
+      "why_it_matters": "Lakeview Clinics requires the patient intake and billing platform to be live in 90 days; missing this deadline caused a loss on a similar healthcare bid.",
+      "mitigation": "Adopt a phased rollout that delivers a secure core within 60 days (as done in RFP-019) and clearly articulate the phased schedule in the proposal."
+    },
+    {
+      "risk": "Insufficient security and compliance documentation (HIPAA, audit readiness)",
+      "evidence": [
+        "RFP-005"
+      ],
+      "why_it_matters": "The client operates in healthcare and will scrutinize HIPAA compliance, BAA readiness, and audit logs; a weak security response led to a loss on a comparable bid.",
+      "mitigation": "Include a detailed control matrix, penetrationΓÇætest summary, BAA offer, and SOCΓÇ»2 evidence, mirroring the approach that won RFP-003 and RFP-019."
+    },
+    {
+      "risk": "Support model perceived as an extraΓÇæcost addΓÇæon",
+      "evidence": [
+        "RFP-015"
+      ],
+      "why_it_matters": "Competitors bundled 24/7 support with a oneΓÇæhour response SLA in the base price, making our proposal look more expensive and less committed.",
+      "mitigation": "Bundle 24/7 support with a oneΓÇæhour SLA in the base price, as was successful in RFP-022."
+    }
+  ],
+  "conflicts": [
+    {
+      "claim": "A phased implementation can satisfy the 90ΓÇæday goΓÇælive requirement",
+      "evidence_for": [
+        "RFP-019"
+      ],
+      "evidence_against": [
+        "RFP-011"
+      ],
+      "deciding_factor": "RFP-019 demonstrated that delivering a secure core in 60 days via a phased plan met the clientΓÇÖs timeline, whereas RFP-011ΓÇÖs singleΓÇæphase 7ΓÇæmonth plan failed."
+    },
+    {
+      "claim": "Including 24/7 support in the base price improves win probability",
+      "evidence_for": [
+        "RFP-022"
+      ],
+      "evidence_against": [
+        "RFP-015"
+      ],
+      "deciding_factor": "RFP-022 won by offering 24/7 support with a oneΓÇæhour SLA as part of the base package, while RFP-015 lost because support was a paid addΓÇæon, making the proposal appear pricier."
+    }
+  ],
+  "ids_in_memory": [
+    "RFP-002",
+    "RFP-003",
+    "RFP-004",
+    "RFP-005",
+    "RFP-006",
+    "RFP-007",
+    "RFP-008",
+    "RFP-009",
+    "RFP-010",
+    "RFP-011",
+    "RFP-012",
+    "RFP-015",
+    "RFP-018",
+    "RFP-019",
+    "RFP-020",
+    "RFP-021",
+    "RFP-022",
+    "RFP-023"
+  ],
+  "invented_ids": [],
+  "memories_used": [
+    "[RFP-011] Lost RFP-011 for Cedar Ridge Medical Group, a mid-market healthcare client, because the seven-month implementation timeline failed to meet the client's 90-day requirement for opening three new clinics; the client required a telehealth intake and billing platform with HIPAA compliance and EHR integration, and a competitor won by promising a secure core in 90 days.",
+    "[RFP-011] The proposal for RFP-011 was rejected because the seven-month implementation timeline failed to meet the client's 90-day requirement for clinic openings. | When: 2026-03-10 | Involving: Cedar Ridge Medical Group | The competitor promised a secure core in 90 days.",
+    "[RFP-020] The proposal for RFP-020 was lost because it lacked an ROI model and adoption metrics, preventing the client from building a business case. | When: 2026-07-10 | Involving: Thornbury Advisory Partners",
+    "[RFP-018] Lost RFP-018 for Kestrel Bancorp, a $480,000 enterprise deal to replace their treasury workflow platform, because the executive summary failed to address the buyer's primary concerns of data residency and regulatory auditability; competitors provided specific hosting and audit commitments on page one, while the proposal buried regional hosting details in an appendix. Key requirements included in-country data residency, regulator audit access, treasury workflow automation, and payment system integration.",
+    "[RFP-011] Cedar Ridge Medical Group required a telehealth intake and billing platform with HIPAA compliance, EHR integration, and a 90-day go-live timeline. | Involving: Cedar Ridge Medical Group | To support the opening of three new clinics.",
+    "[RFP-015] Lost RFP-015 because a competitor offered 24/7 support and a one-hour response SLA in their base price, while the user offered 24/7 support as a paid add-on. | When: 2026-05-05 | Involving: Ironwood Cargo Lines | The competitor's model made the user's proposal appear more expensive and less committed.",
+    "[RFP-007] The deal was won by switching from a 25% discount strategy to a premium tier pricing model supported by a custom ROI model. | When: 2026-01-16 | Involving: Ashford & Lyle Consulting Group | The ROI model demonstrated 6% more billable hours recovered, and the premium tier signaled quality and support.",
+    "[RFP-005] Lost RFP-005 for Halden Trust Bank, a $380,000 enterprise-level project, because the security response was deemed insufficient by the client's risk team; the proposal lacked a control matrix, pen test report, and completed vendor questionnaire, which a competitor provided. The bank's primary requirements included KYC and AML automation, in-country data residency, independent penetration testing, and SSO, as they were replacing their customer onboarding and KYC document workflow under strict regulatory scrutiny.",
+    "[RFP-019] The proposal won due to a security-first approach and a phased implementation plan delivering a secure core within 60 days. | When: 2026-06-26 | Involving: Bayshore Regional Health | Addressing customer concerns regarding security and implementation timelines.",
+    "[RFP-003] Meridian Valley Health System selected the proposal because the control mapping and BAA readiness provided superior confidence compared to other bidders. | When: 2025-11-14 | Involving: Meridian Valley Health System",
+    "[RFP-022] The winning proposal included 24/7 support with a one-hour response SLA and a phased depot rollout. | When: 2026-08-07 | Involving: Coastline Distribution Group | Client required 24/7 support for early morning and late evening shifts, and a low-risk rollout strategy.",
+    "[RFP-019] Bayshore Regional Health required HIPAA compliance, EHR integration, and core functions live within 60 days. | Involving: Bayshore Regional Health",
+    "[RFP-012] The proposal for RFP-012 succeeded due to a stripped-down package, self-service setup, and month-to-month terms. | When: 2026-03-24 | Involving: Pebble & Pine Market | Customer prioritized price and flexibility to avoid long-term contracts and cash flow issues.",
+    "[RFP-019] Won RFP-019 for Bayshore Regional Health, a healthcare organization, for a $260,000 enterprise care coordination platform contract; the winning strategy utilized a security-first approach and a phased implementation plan to deliver a secure core within 60 days, meeting the client's requirements for HIPAA compliance and EHR integration.",
+    "[RFP-003] Key technical requirements for the project included HIPAA compliance, SOC 2 Type II report, encryption, audit logging, and EHR integration. | Involving: Meridian Valley Health System",
+    "[RFP-006] The proposal was reworked into a three-phase rollout (pilot depot, two more depots, full network) with integrated driver training to address client concerns about implementation clarity and operational disruption. | Involving: Trailhead Freight Solutions | Client initially found the implementation plan unclear and feared disruption to live routes.",
+    "[RFP-018] The bid for RFP-018 failed because the executive summary did not address the buyer's primary concern of data residency and regulatory auditability. | When: 2026-06-13 | Involving: Kestrel Bancorp | Competitors provided specific hosting and audit commitments on page one, while our response buried regional hosting details in an appendix.",
+    "[RFP-004] Won RFP-004 for Corvane Precision Manufacturing, a $410,000 enterprise project, by proposing an integration-first pitch, a pilot-at-one-plant strategy, and a specific ERP connector specification to mitigate perceived risk and build client trust; the project requires production scheduling and supply chain visibility across six plants, ERP integration with production order sync, multi-plant scalability, shop-floor data ingestion, and single sign-on, while addressing concerns about production downtime and process inconsistencies.",
+    "[RFP-023] The winning strategy for RFP-023 involved a phased implementation: standard core live in 12 weeks, followed by custom workflow modules in two later releases with fixed pricing per phase. | When: 2026-08-21 | Involving: Halvorsen Industrial Group | Client accepted the need for customisation while mitigating timeline and risk concerns through phased delivery.",
+    "[RFP-006] Won RFP-006 for Trailhead Freight Solutions, a mid-market logistics company, for a $120,000 contract by proposing a three-phase rollout (pilot depot, two more depots, full network) with integrated driver training to address client concerns about implementation clarity and operational disruption; the client required route optimization and dispatch software integrated with their TMS and a driver mobile app.",
+    "[RFP-008] Lost RFP-008 for Bellmoor Components, a $150,000 mid-market manufacturing project, because the proposal was perceived as hand-wavy regarding integration with their legacy MES; the client prioritized credible legacy integration, audit readiness, and on-premises data connectors, while expressing concern over vendors assuming modern APIs exist.",
+    "[RFP-002] Client rejected the 14-week implementation plan and bundled analytics module due to high cost and missing the holiday deadline. | When: 2025-10-27 | Involving: Harlow & Finch Home Goods | Client prioritized speed to go-live and budget over additional features.",
+    "[RFP-002] Lost RFP-002 for Harlow & Finch Home Goods, a mid-market 40-store retail chain. | When: 2025-10-27 | Involving: Harlow & Finch Home Goods | Competitor offered a 30% cheaper, leaner package with an 8-week go-live timeline.",
+    "[RFP-009] Juniper Lane Outfitters selected the proposal due to the committed six-week go-live date and fixed all-in pricing, despite a competitor offering a lower price. | When: 2026-02-11 | Involving: Juniper Lane Outfitters",
+    "[RFP-010] The RFP-010 proposal was valued at $450,000 and required scaling to 5 million subscribers, integration with billing and CRM systems, 99.95% uptime, and specific API rate limits. | When: 2026-02-25 | Involving: Skyreach Communications",
+    "[unattributed] The proposal strategy focused on security-first measures, including control-by-control compliance mapping, a penetration test summary, and proactive BAA offering. | To address the client's high priority on security and regulatory compliance.",
+    "[RFP-021] A competitor won RFP-021 by submitting a concise 25-page proposal with a single recommended package and clear pricing. | When: 2026-07-24 | Involving: Quantforge Software"
+  ]
+}

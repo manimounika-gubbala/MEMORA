@@ -1,0 +1,952 @@
+[
+  {
+    "rfp_id": "RFP-001",
+    "date_closed": "2025-10-08",
+    "client_name": "Northbridge Mutual Insurance",
+    "industry": "Insurance",
+    "company_size": "Enterprise",
+    "deal_size_usd": 320000,
+    "rfp_summary": "Northbridge wanted to replace a mainframe-era claims intake workflow with a modern platform that could absorb seasonal claim spikes after storms without slowing adjusters down.",
+    "key_requirements": [
+      "Integration with the existing policy administration system",
+      "Role-based access and full audit trails on every claim action",
+      "Ability to scale during catastrophe-season claim surges",
+      "Phased data migration from the legacy claims database"
+    ],
+    "customer_priorities": [
+      "Reliable integration with legacy systems",
+      "Scalability during peak claim volume"
+    ],
+    "customer_concerns": [
+      "Integration failures halting claims processing",
+      "Unpredictable costs when claim volume spikes"
+    ],
+    "proposal_strategy": "Led with an integration architecture diagram naming the exact connectors we would build for their policy admin system, backed by two references from insurers with similar legacy stacks. Feature detail was pushed to an appendix.",
+    "pricing_approach": "Tiered pricing by monthly claim volume with a hard annual cap so a bad storm season could not blow up the budget.",
+    "key_response_points": [
+      "Named connectors and an API contract for the policy admin integration",
+      "Load test showing 3x normal claim volume with no degradation",
+      "Two-stage migration with a rollback plan",
+      "Annual cost cap tied to volume tiers"
+    ],
+    "customer_objections": [
+      "How will this integrate with our existing systems without a long freeze period?",
+      "Volume-based pricing feels open-ended and hard to budget"
+    ],
+    "outcome": "won",
+    "client_reason": "The evaluation team said the integration architecture was the only one that felt buildable, and the pricing cap gave finance the predictability they needed.",
+    "lessons_learned": "For enterprise insurance and other enterprise buyers running legacy systems, a concrete integration architecture with named connectors and references mattered more than feature breadth. A pricing cap on volume-based tiers neutralised the fear of runaway costs."
+  },
+  {
+    "rfp_id": "RFP-002",
+    "date_closed": "2025-10-27",
+    "client_name": "Harlow & Finch Home Goods",
+    "industry": "Retail",
+    "company_size": "Mid-market",
+    "deal_size_usd": 65000,
+    "rfp_summary": "A 40-store home goods chain needed inventory and order management synced with its POS before the holiday season, on a tight budget.",
+    "key_requirements": [
+      "Real-time store inventory sync with the existing POS",
+      "Go-live before the start of holiday trading",
+      "Low total cost of ownership",
+      "Simple training for store staff"
+    ],
+    "customer_priorities": [
+      "Price",
+      "Speed to go-live before the holiday peak"
+    ],
+    "customer_concerns": [
+      "Budget overruns",
+      "A messy cutover during the busiest quarter of the year"
+    ],
+    "proposal_strategy": "We submitted our full-featured package with the analytics module bundled in, on our standard 14-week implementation, believing the extra value would justify the price.",
+    "pricing_approach": "List price with a modest 5% discount for signing early.",
+    "key_response_points": [
+      "Comprehensive inventory and demand analytics",
+      "Standard 14-week implementation plan",
+      "Dedicated onboarding manager",
+      "Bundled analytics module"
+    ],
+    "customer_objections": [
+      "Your pricing is higher than competitors",
+      "A 14-week implementation misses our holiday deadline"
+    ],
+    "outcome": "lost",
+    "client_reason": "A competitor offered a leaner package roughly 30% cheaper with an 8-week go-live. The client did not see the bundled analytics as worth the extra cost or delay.",
+    "lessons_learned": "Mid-market retail buyers with a seasonal deadline decide on price and time-to-launch. Bundling extras raised our price without adding perceived value. Lead with a lean core package and a fast go-live date, and offer analytics as an optional add-on later."
+  },
+  {
+    "rfp_id": "RFP-003",
+    "date_closed": "2025-11-14",
+    "client_name": "Meridian Valley Health System",
+    "industry": "Healthcare",
+    "company_size": "Enterprise",
+    "deal_size_usd": 240000,
+    "rfp_summary": "A regional health system was selecting a patient scheduling and referral management platform. Their security and compliance team held a strong veto over the decision.",
+    "key_requirements": [
+      "HIPAA compliance with a signed BAA",
+      "SOC 2 Type II report",
+      "Encryption in transit and at rest with detailed audit logging",
+      "Integration with their EHR"
+    ],
+    "customer_priorities": [
+      "Security and regulatory compliance",
+      "Vendor trustworthiness"
+    ],
+    "customer_concerns": [
+      "Exposure of patient data",
+      "Breach liability landing on the health system"
+    ],
+    "proposal_strategy": "Security-first proposal. We opened with a control-by-control compliance mapping, attached a recent penetration test summary, and offered a BAA up front rather than on request.",
+    "pricing_approach": "Fixed annual subscription at a premium price, justified by the compliance posture and included security reviews.",
+    "key_response_points": [
+      "Control mapping to HIPAA safeguards",
+      "SOC 2 Type II report and pen test summary attached",
+      "BAA ready to sign",
+      "EHR integration approach with data-flow diagrams"
+    ],
+    "customer_objections": [
+      "We need stronger security guarantees than a standard questionnaire answer",
+      "Your price is above two other bidders"
+    ],
+    "outcome": "won",
+    "client_reason": "Their security team said our control mapping and BAA readiness gave them confidence the others could not match. Their go-live date was flexible, so the longer security review did not hurt us.",
+    "lessons_learned": "For enterprise healthcare with strict compliance requirements, concrete security controls, attached evidence and BAA readiness beat product feature talk and justified premium pricing. Note that this worked partly because the client had no hard go-live deadline, so always check whether timing is flexible before relying on this approach."
+  },
+  {
+    "rfp_id": "RFP-004",
+    "date_closed": "2025-11-30",
+    "client_name": "Corvane Precision Manufacturing",
+    "industry": "Manufacturing",
+    "company_size": "Enterprise",
+    "deal_size_usd": 410000,
+    "rfp_summary": "Corvane needed production scheduling and supply chain visibility across six plants, integrated with their existing ERP and shop-floor systems.",
+    "key_requirements": [
+      "ERP integration with production order sync",
+      "Multi-plant scalability",
+      "Shop-floor data ingestion from existing machine systems",
+      "Single sign-on with their identity provider"
+    ],
+    "customer_priorities": [
+      "Integrations that actually work with the ERP",
+      "Scalability across plants"
+    ],
+    "customer_concerns": [
+      "Production downtime during rollout",
+      "Every plant running slightly different processes"
+    ],
+    "proposal_strategy": "Integration-first pitch with a pilot-at-one-plant, then scale approach. We included a reference from a similar multi-plant manufacturer and a proposed ERP connector spec.",
+    "pricing_approach": "Per-plant tiered pricing with a volume discount as more plants were added.",
+    "key_response_points": [
+      "Pilot plant rollout in 10 weeks before committing the rest",
+      "ERP connector specification and test plan",
+      "Reference call with a similar manufacturer",
+      "Volume discount schedule for plants two to six"
+    ],
+    "customer_objections": [
+      "How will this integrate with our ERP without disrupting production?",
+      "We are worried about one plant delaying the others"
+    ],
+    "outcome": "won",
+    "client_reason": "The pilot-then-scale plan made the risk feel contained, and the client trusted our ERP connector plan because it was specific.",
+    "lessons_learned": "Enterprise manufacturers with multiple sites respond to pilot-then-scale rollouts backed by a concrete ERP connector plan. Per-site tiered pricing made expansion costs predictable and helped the deal."
+  },
+  {
+    "rfp_id": "RFP-005",
+    "date_closed": "2025-12-12",
+    "client_name": "Halden Trust Bank",
+    "industry": "Banking/Financial Services",
+    "company_size": "Enterprise",
+    "deal_size_usd": 380000,
+    "rfp_summary": "Halden was replacing its customer onboarding and KYC document workflow. Regulators were scrutinising third-party vendors, so vendor risk assessment was central.",
+    "key_requirements": [
+      "KYC and AML check automation",
+      "Encryption at rest with in-country data residency",
+      "Independent penetration testing evidence",
+      "SSO and detailed access controls"
+    ],
+    "customer_priorities": [
+      "Security and regulatory compliance",
+      "Passing internal third-party risk review"
+    ],
+    "customer_concerns": [
+      "Regulatory findings tied to vendor weaknesses",
+      "Data leaving the country"
+    ],
+    "proposal_strategy": "We led with workflow automation and a polished onboarding UX. The security section was two generic pages with a link to our security whitepaper.",
+    "pricing_approach": "Competitive pricing with a 10% discount to stand out.",
+    "key_response_points": [
+      "Automated KYC document workflow",
+      "Streamlined customer onboarding UX",
+      "Analytics on onboarding drop-off",
+      "Link to our security whitepaper"
+    ],
+    "customer_objections": [
+      "We need stronger security guarantees in the proposal itself",
+      "Our third-party risk questionnaire answers were incomplete"
+    ],
+    "outcome": "lost",
+    "client_reason": "Their risk team scored our security response as insufficient. A competitor provided a full control matrix, pen test report and completed vendor questionnaire with the bid.",
+    "lessons_learned": "In banking, a generic security section is disqualifying regardless of price. Attach the control matrix, pen test summary and completed third-party risk answers in the first submission instead of linking to a whitepaper. Discounting does not compensate for weak security evidence."
+  },
+  {
+    "rfp_id": "RFP-006",
+    "date_closed": "2025-12-29",
+    "client_name": "Trailhead Freight Solutions",
+    "industry": "Logistics",
+    "company_size": "Mid-market",
+    "deal_size_usd": 120000,
+    "rfp_summary": "Trailhead was looking for route optimization and dispatch software integrated with their transportation management system and a driver mobile app.",
+    "key_requirements": [
+      "Integration with the existing TMS",
+      "Driver mobile app with real-time tracking",
+      "Route optimization for mixed local and long-haul routes",
+      "Minimal disruption to daily dispatch"
+    ],
+    "customer_priorities": [
+      "Fast, measurable efficiency gains",
+      "Driver adoption"
+    ],
+    "customer_concerns": [
+      "Dispatchers rejecting a new system",
+      "Rollout disrupting live deliveries"
+    ],
+    "proposal_strategy": "Our first draft led with routing algorithm features and benchmarks. In the clarification round the client said the implementation plan was unclear, so we reworked the proposal around a three-phase rollout: pilot depot, two more depots, then full network, with driver training built into each phase.",
+    "pricing_approach": "Fixed price for phase one with priced options for phases two and three, so the client could commit in stages.",
+    "key_response_points": [
+      "Three-phase rollout with success criteria per phase",
+      "Driver training and dispatcher shadowing plan",
+      "TMS integration approach",
+      "Fixed price for the pilot"
+    ],
+    "customer_objections": [
+      "Your implementation plan isn't clear",
+      "We are nervous about disruption to live routes"
+    ],
+    "outcome": "won",
+    "client_reason": "The phased plan with a fixed-price pilot lowered the perceived risk, and the driver training plan showed we understood adoption.",
+    "lessons_learned": "When a features-led proposal draws an implementation objection, switch to a phased rollout with a fixed-price first phase. In logistics, the driver and dispatcher adoption plan matters as much as the optimisation algorithm."
+  },
+  {
+    "rfp_id": "RFP-007",
+    "date_closed": "2026-01-16",
+    "client_name": "Ashford & Lyle Consulting Group",
+    "industry": "Professional Services",
+    "company_size": "Mid-market",
+    "deal_size_usd": 85000,
+    "rfp_summary": "A consulting firm wanted project, resource and billing management to improve consultant utilisation and invoice accuracy.",
+    "key_requirements": [
+      "Time tracking and utilisation dashboards",
+      "Invoicing integration with their accounting system",
+      "Customisable reports for partners",
+      "Reasonable admin effort for a small ops team"
+    ],
+    "customer_priorities": [
+      "Return on investment through better utilisation",
+      "Flexible reporting"
+    ],
+    "customer_concerns": [
+      "Whether the tool would be reliable",
+      "Justifying the spend to the partners"
+    ],
+    "proposal_strategy": "We first bid with a 25% discount to win on price. The client asked why we were so cheap and whether support would suffer. We reversed course, dropped the discount, moved to our premium tier and built an ROI model from their own utilisation figures showing about 6% more billable hours recovered.",
+    "pricing_approach": "Premium tier priced at full rate, justified by a customer-specific ROI model instead of a discount.",
+    "key_response_points": [
+      "ROI model using the client's actual utilisation data",
+      "Custom partner reporting examples",
+      "Accounting integration walkthrough",
+      "Named support contact and response times"
+    ],
+    "customer_objections": [
+      "Why is your price so low, and what are we giving up?",
+      "How will we justify this cost to the partners?"
+    ],
+    "outcome": "won",
+    "client_reason": "The partners approved the deal because the ROI model tied the price to their own numbers, and the premium tier signalled quality and proper support.",
+    "lessons_learned": "Deep discounts can trigger quality doubts with professional-services buyers. A premium price backed by an ROI model built on the customer's own data won where a discount raised suspicion. Use discounting with cost-driven, simple-product buyers, not with buyers who equate price with reliability."
+  },
+  {
+    "rfp_id": "RFP-008",
+    "date_closed": "2026-01-30",
+    "client_name": "Bellmoor Components",
+    "industry": "Manufacturing",
+    "company_size": "Mid-market",
+    "deal_size_usd": 150000,
+    "rfp_summary": "Bellmoor needed a quality management system connected to an older manufacturing execution system with limited APIs.",
+    "key_requirements": [
+      "Integration with a legacy MES with limited API support",
+      "Statistical process control charts",
+      "Audit trails for customer quality audits",
+      "On-premises data connectors"
+    ],
+    "customer_priorities": [
+      "A credible integration with the legacy MES",
+      "Audit readiness"
+    ],
+    "customer_concerns": [
+      "Legacy system cannot be replaced this year",
+      "Vendors assuming modern APIs exist"
+    ],
+    "proposal_strategy": "We focused on our modern cloud features and assumed the MES could be reached through standard APIs. The integration approach was one paragraph.",
+    "pricing_approach": "Competitive fixed price for the full implementation.",
+    "key_response_points": [
+      "Cloud-native SPC dashboards",
+      "Audit trail features",
+      "Standard REST API integration",
+      "Fixed implementation price"
+    ],
+    "customer_objections": [
+      "How will this integrate with our existing MES that has no modern API?",
+      "Your integration section does not show you understand our environment"
+    ],
+    "outcome": "lost",
+    "client_reason": "The winning competitor proposed an on-site discovery phase and a middleware layer for the legacy MES. Our integration plan looked hand-wavy in comparison.",
+    "lessons_learned": "For manufacturers with legacy systems, never assume modern APIs. Propose a discovery phase, middleware and a detailed integration plan. A weak integration plan lost this deal even with a competitive price."
+  },
+  {
+    "rfp_id": "RFP-009",
+    "date_closed": "2026-02-11",
+    "client_name": "Juniper Lane Outfitters",
+    "industry": "Retail",
+    "company_size": "Mid-market",
+    "deal_size_usd": 55000,
+    "rfp_summary": "An outdoor apparel retailer wanted order fulfillment and inventory software connected to its storefront platform in time for the spring season.",
+    "key_requirements": [
+      "Connector to the existing storefront platform",
+      "Go-live within six weeks",
+      "Simple setup for a small ops team",
+      "Predictable monthly cost"
+    ],
+    "customer_priorities": [
+      "Price",
+      "Speed to go-live"
+    ],
+    "customer_concerns": [
+      "Cost overruns",
+      "Complex software their small team cannot manage"
+    ],
+    "proposal_strategy": "Applying the lesson from RFP-002, we proposed a lean core package with prebuilt connectors and a committed six-week go-live date with weekly milestones. Analytics were left as an optional add-on.",
+    "pricing_approach": "Competitive fixed price with no hidden implementation fees.",
+    "key_response_points": [
+      "Six-week go-live commitment with weekly milestones",
+      "Prebuilt storefront connector",
+      "Fixed price, no hidden fees",
+      "Optional add-ons priced separately"
+    ],
+    "customer_objections": [
+      "Your pricing is a little higher than one competitor",
+      "Can you really hit six weeks?"
+    ],
+    "outcome": "won",
+    "client_reason": "They chose us for the committed go-live date and the fixed all-in price, even though one competitor was slightly cheaper.",
+    "lessons_learned": "Retail mid-market buyers reward a lean package, a committed go-live date with milestones, and fixed pricing. A small price gap did not matter once timing risk was removed."
+  },
+  {
+    "rfp_id": "RFP-010",
+    "date_closed": "2026-02-25",
+    "client_name": "Skyreach Communications",
+    "industry": "Telecommunications",
+    "company_size": "Enterprise",
+    "deal_size_usd": 450000,
+    "rfp_summary": "Skyreach needed a billing dispute and case management platform able to serve millions of subscribers, integrated with billing and CRM systems.",
+    "key_requirements": [
+      "Scale to 5 million subscribers",
+      "Integration with the billing platform and CRM",
+      "99.95% uptime commitment",
+      "API rate limits suitable for peak-hour load"
+    ],
+    "customer_priorities": [
+      "Scalability and performance",
+      "Integration depth"
+    ],
+    "customer_concerns": [
+      "Performance degradation at peak load",
+      "Support responsiveness during outages"
+    ],
+    "proposal_strategy": "Evidence-led proposal. We shared load test results at twice their projected volume, a reference architecture, and two references from large telecom customers.",
+    "pricing_approach": "Premium enterprise pricing with volume tiers, defended with performance evidence rather than discounts.",
+    "key_response_points": [
+      "Load test at 2x projected peak with latency numbers",
+      "Reference architecture for billing and CRM integration",
+      "Uptime SLA with service credits",
+      "Escalation path for outages"
+    ],
+    "customer_objections": [
+      "Your pricing is higher than competitors",
+      "How do we know it scales to our subscriber base?"
+    ],
+    "outcome": "won",
+    "client_reason": "The load test evidence answered their biggest fear, and the integration reference architecture beat competitors who only offered claims.",
+    "lessons_learned": "Enterprise telecom buyers decide on scalability proof. Benchmark evidence at above-expected volume outweighed a higher price. When the concern is scale, show measured results, not assurances."
+  },
+  {
+    "rfp_id": "RFP-011",
+    "date_closed": "2026-03-10",
+    "client_name": "Cedar Ridge Medical Group",
+    "industry": "Healthcare",
+    "company_size": "Mid-market",
+    "deal_size_usd": 210000,
+    "rfp_summary": "A growing medical group needed a telehealth intake and billing platform live before three new clinics opened, while still meeting HIPAA requirements.",
+    "key_requirements": [
+      "HIPAA compliance and encryption",
+      "EHR integration",
+      "Go-live in 90 days to support clinic openings",
+      "Training for front-desk staff at new clinics"
+    ],
+    "customer_priorities": [
+      "Meeting the clinic opening date",
+      "Solid security and compliance"
+    ],
+    "customer_concerns": [
+      "New clinics opening without working intake",
+      "Compliance gaps in a rushed rollout"
+    ],
+    "proposal_strategy": "We reused the security-first approach that won RFP-003. The proposal had heavy compliance documentation and a seven-month implementation that included an extended security review.",
+    "pricing_approach": "Premium fixed price justified by compliance posture.",
+    "key_response_points": [
+      "Detailed HIPAA control mapping",
+      "Seven-month implementation with extended security review",
+      "BAA offered up front",
+      "EHR integration design"
+    ],
+    "customer_objections": [
+      "Your implementation timeline is too long for our clinic openings",
+      "We need something live in 90 days"
+    ],
+    "outcome": "lost",
+    "client_reason": "A competitor promised a secure core in 90 days with later enhancements. Our seven-month plan missed their opening date, so security strength did not save the bid.",
+    "lessons_learned": "Security-first works in healthcare only when the timeline is flexible. Check the RFP for hard go-live dates. When timing is tight, propose a phased launch with a secure core in the required window, and keep the full security review running in parallel."
+  },
+  {
+    "rfp_id": "RFP-012",
+    "date_closed": "2026-03-24",
+    "client_name": "Pebble & Pine Market",
+    "industry": "Retail",
+    "company_size": "Startup",
+    "deal_size_usd": 30000,
+    "rfp_summary": "A young online retailer needed a simple returns and customer support portal with minimal cost and no long contract.",
+    "key_requirements": [
+      "Returns portal linked to their storefront",
+      "Simple setup with almost no IT support",
+      "Low monthly cost",
+      "No long-term contract"
+    ],
+    "customer_priorities": [
+      "Price",
+      "Flexibility and simplicity"
+    ],
+    "customer_concerns": [
+      "Cash flow",
+      "Being locked into a contract as the business changes"
+    ],
+    "proposal_strategy": "Simple, short proposal. We offered a stripped-down package, self-service setup and a month-to-month term.",
+    "pricing_approach": "Aggressive 35% first-year discount with a fixed monthly fee.",
+    "key_response_points": [
+      "Self-service setup within two weeks",
+      "Month-to-month contract",
+      "Fixed monthly fee",
+      "Upgrade path as they grow"
+    ],
+    "customer_objections": [
+      "We do not want a long-term commitment",
+      "Can we start smaller and upgrade later?"
+    ],
+    "outcome": "won",
+    "client_reason": "Price and flexibility were decisive. The founders wanted the cheapest reliable option they could cancel at any time.",
+    "lessons_learned": "Deep discounts and flexible terms work for cost-driven startup retailers buying a simple product. Compare with RFP-007 where a discount hurt: discounting is safe when the buyer is price-driven and the product is simple, and risky when the buyer equates price with quality."
+  },
+  {
+    "rfp_id": "RFP-013",
+    "date_closed": "2026-04-07",
+    "client_name": "Vantage Wireless Partners",
+    "industry": "Telecommunications",
+    "company_size": "Mid-market",
+    "deal_size_usd": 175000,
+    "rfp_summary": "A regional wireless operator sought field service scheduling with unusual dispatch rules and a partner contractor portal.",
+    "key_requirements": [
+      "Customisable dispatch workflows for regional technicians",
+      "Custom fields and job types",
+      "Partner contractor portal",
+      "Integration with their ticketing system"
+    ],
+    "customer_priorities": [
+      "Fitting their unique field processes",
+      "Customisation flexibility"
+    ],
+    "customer_concerns": [
+      "Being forced to change how technicians work",
+      "Vendors offering only rigid templates"
+    ],
+    "proposal_strategy": "We proposed our standard product with configuration options and declined custom development to protect the timeline.",
+    "pricing_approach": "Standard mid-market tier, no custom development line.",
+    "key_response_points": [
+      "Standard dispatch module with configuration options",
+      "Partner portal in standard form",
+      "Fast implementation because no custom work",
+      "Standard ticketing integration"
+    ],
+    "customer_objections": [
+      "We need more customisation for our dispatch rules",
+      "Your standard workflow does not match how our regions operate"
+    ],
+    "outcome": "lost",
+    "client_reason": "A competitor offered scoped, tailored workflow modules with a fixed price. Our refusal to customise made us look inflexible.",
+    "lessons_learned": "For mid-market telecom buyers with unusual dispatch processes, offer a scoped custom workflow package at a fixed price instead of declining customisation. Saying no to customisation lost the deal, but see RFP-024 for the risk of over-customising."
+  },
+  {
+    "rfp_id": "RFP-014",
+    "date_closed": "2026-04-21",
+    "client_name": "Lakemont Federal Credit Union",
+    "industry": "Banking/Financial Services",
+    "company_size": "Mid-market",
+    "deal_size_usd": 265000,
+    "rfp_summary": "Lakemont was replacing its loan application workflow and wanted a vendor that would satisfy regulators and their board's risk committee.",
+    "key_requirements": [
+      "Digital loan application and decisioning workflow",
+      "Documented security controls and independent testing",
+      "In-country data residency statement",
+      "Integration with the core banking system"
+    ],
+    "customer_priorities": [
+      "Security guarantees",
+      "Smooth member experience"
+    ],
+    "customer_concerns": [
+      "Regulatory scrutiny of vendors",
+      "Member data protection"
+    ],
+    "proposal_strategy": "Our first draft focused on features and member experience. After the client said they needed stronger security guarantees, we rebuilt the security section with a control matrix, SOC 2 report, pen test summary and data residency statement, applying the lesson from RFP-005.",
+    "pricing_approach": "Tiered pricing by loan application volume.",
+    "key_response_points": [
+      "Control matrix and SOC 2 report attached",
+      "Pen test summary",
+      "Data residency statement",
+      "Core banking integration plan"
+    ],
+    "customer_objections": [
+      "We need stronger security guarantees",
+      "How will you integrate with our core banking system?"
+    ],
+    "outcome": "won",
+    "client_reason": "The rebuilt security package and integration plan cleared the risk committee, and the member experience features then tipped the decision our way.",
+    "lessons_learned": "In banking, rebuilding the security response with concrete evidence mid-process can recover a deal that a generic response would lose. Lead with security evidence first, then features."
+  },
+  {
+    "rfp_id": "RFP-015",
+    "date_closed": "2026-05-05",
+    "client_name": "Ironwood Cargo Lines",
+    "industry": "Logistics",
+    "company_size": "Enterprise",
+    "deal_size_usd": 330000,
+    "rfp_summary": "Ironwood ran warehouses around the clock in three time zones and needed a warehouse management system with dependable support.",
+    "key_requirements": [
+      "24/7 support across three time zones",
+      "Integration with existing WMS hardware",
+      "High uptime for overnight operations",
+      "Fast issue escalation"
+    ],
+    "customer_priorities": [
+      "Round-the-clock support",
+      "Uptime"
+    ],
+    "customer_concerns": [
+      "Night-shift outages with nobody to call",
+      "Slow response during peak freight season"
+    ],
+    "proposal_strategy": "We emphasised product features and included business-hours support as standard, with 24/7 support as a paid add-on.",
+    "pricing_approach": "Premium base price with support upgrades priced separately.",
+    "key_response_points": [
+      "Feature-rich warehouse management module",
+      "Business-hours support included",
+      "24/7 support available as an add-on",
+      "Standard escalation process"
+    ],
+    "customer_objections": [
+      "We need 24/7 support included, not as an add-on",
+      "Who do we call at 3 a.m. when the warehouse is down?"
+    ],
+    "outcome": "lost",
+    "client_reason": "A competitor included 24/7 support with a one-hour response SLA in the base price. Our add-on model made us look more expensive and less committed.",
+    "lessons_learned": "Logistics customers that operate around the clock expect 24/7 support in the base offering with a clear response SLA. Treating it as an add-on lost the deal."
+  },
+  {
+    "rfp_id": "RFP-016",
+    "date_closed": "2026-05-19",
+    "client_name": "Ridgeway Sporting Goods",
+    "industry": "Retail",
+    "company_size": "Mid-market",
+    "deal_size_usd": 72000,
+    "rfp_summary": "A sporting goods chain wanted inventory management with POS connectors, live before its back-to-school and fall season.",
+    "key_requirements": [
+      "Prebuilt POS connectors",
+      "Go-live in eight weeks",
+      "Store-by-store phased rollout",
+      "Clear per-store pricing"
+    ],
+    "customer_priorities": [
+      "Price",
+      "A firm go-live date"
+    ],
+    "customer_concerns": [
+      "Rollout problems during peak season",
+      "Hidden costs"
+    ],
+    "proposal_strategy": "Same lean-core approach as RFP-009, with a phased store rollout in three waves, weekly milestones and a firm eight-week completion commitment.",
+    "pricing_approach": "Competitive pricing with a per-store fee and a fixed implementation price.",
+    "key_response_points": [
+      "Eight-week go-live commitment",
+      "Three-wave store rollout",
+      "Prebuilt POS connectors",
+      "Transparent per-store pricing"
+    ],
+    "customer_objections": [
+      "Your pricing is slightly above one other bidder",
+      "Can the system handle peak-season order volume?"
+    ],
+    "outcome": "won",
+    "client_reason": "They valued the firm eight-week date and the phased store rollout more than a small price difference.",
+    "lessons_learned": "For mid-market retail, competitive pricing plus a committed go-live date and a phased store rollout wins consistently. Add a peak-volume statement to pre-empt scale concerns."
+  },
+  {
+    "rfp_id": "RFP-017",
+    "date_closed": "2026-06-02",
+    "client_name": "Summit Ridge Insurance",
+    "industry": "Insurance",
+    "company_size": "Mid-market",
+    "deal_size_usd": 195000,
+    "rfp_summary": "Summit Ridge was selecting an underwriting workflow platform for use across multiple states, each with its own regulatory rules.",
+    "key_requirements": [
+      "Support for state-specific insurance regulations",
+      "Audit logs and data retention controls",
+      "Underwriting rules engine",
+      "Integration with their policy system"
+    ],
+    "customer_priorities": [
+      "Regulatory compliance detail",
+      "Underwriting accuracy"
+    ],
+    "customer_concerns": [
+      "Regulatory findings across multiple states",
+      "Vendors giving vague compliance answers"
+    ],
+    "proposal_strategy": "We led with underwriting speed and AI features. The compliance section was a high-level summary without mapping to individual states.",
+    "pricing_approach": "Premium price justified by underwriting speed gains.",
+    "key_response_points": [
+      "Faster underwriting decisions",
+      "AI-assisted risk scoring",
+      "General compliance summary",
+      "Policy system integration overview"
+    ],
+    "customer_objections": [
+      "Where is the compliance documentation for each state?",
+      "We need detail on data retention and audit logs"
+    ],
+    "outcome": "lost",
+    "client_reason": "Their compliance team found no state-by-state mapping, retention detail or audit log description, and picked a vendor with full documentation.",
+    "lessons_learned": "Insurance buyers need compliance mapped by regulation and state, with retention and audit details. Leading with speed and AI features while giving a high-level compliance summary lost this deal."
+  },
+  {
+    "rfp_id": "RFP-018",
+    "date_closed": "2026-06-13",
+    "client_name": "Kestrel Bancorp",
+    "industry": "Banking/Financial Services",
+    "company_size": "Enterprise",
+    "deal_size_usd": 480000,
+    "rfp_summary": "Kestrel was replacing its treasury workflow platform. The RFP repeatedly stressed that data must remain within the country and be auditable by regulators.",
+    "key_requirements": [
+      "In-country data residency with regulator audit access",
+      "Treasury workflow automation",
+      "Integration with payment systems",
+      "Strong access controls"
+    ],
+    "customer_priorities": [
+      "Data residency and regulatory auditability",
+      "Integration with payment systems"
+    ],
+    "customer_concerns": [
+      "Regulators questioning where data is stored",
+      "Cross-border data transfer"
+    ],
+    "proposal_strategy": "We led with integration and analytics strengths. Our answer on data residency was in an appendix and stated only that we use regional hosting.",
+    "pricing_approach": "Premium pricing based on analytics value.",
+    "key_response_points": [
+      "Treasury analytics dashboards",
+      "Payment system integration",
+      "Regional hosting mention in appendix",
+      "Standard access controls"
+    ],
+    "customer_objections": [
+      "Where exactly will our data reside and can regulators audit it?",
+      "Your executive summary does not address our main requirement"
+    ],
+    "outcome": "lost",
+    "client_reason": "The buyer's main concern, data residency, was not addressed in our executive summary. Competitors answered it on page one with a specific hosting and audit commitment.",
+    "lessons_learned": "Read the RFP for the customer's stated primary concern and answer it directly in the first page or executive summary. Burying the main concern in an appendix lost a very large deal despite strong integration and analytics."
+  },
+  {
+    "rfp_id": "RFP-019",
+    "date_closed": "2026-06-26",
+    "client_name": "Bayshore Regional Health",
+    "industry": "Healthcare",
+    "company_size": "Enterprise",
+    "deal_size_usd": 260000,
+    "rfp_summary": "Bayshore needed a care coordination platform with strict security and compliance requirements and a target of having core functions live within roughly two months.",
+    "key_requirements": [
+      "HIPAA compliance with BAA",
+      "Detailed security controls and audit logging",
+      "EHR integration",
+      "Core functions live within 60 days"
+    ],
+    "customer_priorities": [
+      "Security and compliance",
+      "A credible timeline"
+    ],
+    "customer_concerns": [
+      "Compliance gaps",
+      "A long implementation delaying care coordination benefits"
+    ],
+    "proposal_strategy": "We combined the security-first approach with a detailed phased implementation plan: a secure core in 60 days, EHR integration in phase two, and advanced features in phase three, each with named milestones.",
+    "pricing_approach": "Fixed price with milestone-based payments tied to each phase.",
+    "key_response_points": [
+      "Control mapping and BAA readiness",
+      "Secure core live in 60 days",
+      "Phase-by-phase milestones and owners",
+      "Milestone-based payment schedule"
+    ],
+    "customer_objections": [
+      "We need stronger security guarantees",
+      "We are worried about the implementation timeline"
+    ],
+    "outcome": "won",
+    "client_reason": "They chose us for the combination of strong security evidence and a phased plan that delivered a secure core within their window.",
+    "lessons_learned": "For enterprise healthcare with strict compliance requirements and a real timeline pressure, pair concrete security controls with a phased implementation plan and milestone-based payments. This combination won where security alone won only with flexible timing (RFP-003) and lost with a long timeline (RFP-011)."
+  },
+  {
+    "rfp_id": "RFP-020",
+    "date_closed": "2026-07-10",
+    "client_name": "Thornbury Advisory Partners",
+    "industry": "Professional Services",
+    "company_size": "Mid-market",
+    "deal_size_usd": 140000,
+    "rfp_summary": "An advisory firm wanted a knowledge management platform to help consultants find past work and reuse it, and needed a business case for the partners.",
+    "key_requirements": [
+      "Enterprise search across document repositories",
+      "Integrations with existing document storage",
+      "Usage analytics",
+      "Measurable business outcomes"
+    ],
+    "customer_priorities": [
+      "Clear return on investment",
+      "Measurable outcomes"
+    ],
+    "customer_concerns": [
+      "Partners refusing to fund it without a business case",
+      "Low consultant adoption"
+    ],
+    "proposal_strategy": "We submitted a feature-led proposal at a premium price without any ROI model or adoption metrics.",
+    "pricing_approach": "Premium pricing without financial justification.",
+    "key_response_points": [
+      "Advanced search and tagging features",
+      "Repository integrations",
+      "Usage analytics dashboards",
+      "Premium tier pricing"
+    ],
+    "customer_objections": [
+      "How do we justify this cost to our partners?",
+      "What measurable savings should we expect?"
+    ],
+    "outcome": "lost",
+    "client_reason": "The client could not build a business case from our proposal. A competitor supplied an ROI calculator using the firm's own consultant numbers.",
+    "lessons_learned": "Premium pricing needs an ROI model built on the customer's data, as in RFP-007. A feature-only proposal with no business case lost because the champion could not defend the spend internally."
+  },
+  {
+    "rfp_id": "RFP-021",
+    "date_closed": "2026-07-24",
+    "client_name": "Quantforge Software",
+    "industry": "SaaS/Technology",
+    "company_size": "Enterprise",
+    "deal_size_usd": 290000,
+    "rfp_summary": "A software company wanted a customer success platform integrated with their CRM, data warehouse and SSO, and evaluated bids with a cross-functional committee.",
+    "key_requirements": [
+      "CRM and data warehouse integration",
+      "SSO",
+      "Customer health scoring",
+      "Clear implementation approach"
+    ],
+    "customer_priorities": [
+      "Integration with existing data stack",
+      "An easy-to-evaluate proposal"
+    ],
+    "customer_concerns": [
+      "Committee unable to compare vendors",
+      "Paying for modules they do not need"
+    ],
+    "proposal_strategy": "We submitted a 90-page proposal covering four modules with three pricing scenarios and multiple implementation options, trying to cover every possible need.",
+    "pricing_approach": "Multiple tiered scenarios with optional modules.",
+    "key_response_points": [
+      "Four-module solution overview",
+      "Three pricing scenarios",
+      "Multiple implementation paths",
+      "Extensive integration catalogue"
+    ],
+    "customer_objections": [
+      "The proposal is hard to compare with the others",
+      "It is unclear what we actually need to buy"
+    ],
+    "outcome": "lost",
+    "client_reason": "The evaluation committee could not tell what to purchase. A competitor delivered a 25-page proposal with one recommended package and a clear price.",
+    "lessons_learned": "Overly complex proposals lose. Give one recommended package, a single clear price and a short document. Offer options only after the client asks for them."
+  },
+  {
+    "rfp_id": "RFP-022",
+    "date_closed": "2026-08-07",
+    "client_name": "Coastline Distribution Group",
+    "industry": "Logistics",
+    "company_size": "Mid-market",
+    "deal_size_usd": 140000,
+    "rfp_summary": "Coastline wanted last-mile delivery tracking and customer notifications for a fleet that ran early morning and late evening shifts.",
+    "key_requirements": [
+      "Real-time delivery tracking and notifications",
+      "Integration with their dispatch system",
+      "Dependable support outside business hours",
+      "Phased rollout across depots"
+    ],
+    "customer_priorities": [
+      "Support availability",
+      "Low-risk rollout"
+    ],
+    "customer_concerns": [
+      "Outages during early and late deliveries",
+      "Driver disruption"
+    ],
+    "proposal_strategy": "Our first draft offered standard business-hours support. In the clarification round the client said they needed 24/7 support. Applying the lesson from RFP-015, we added 24/7 support with a one-hour response SLA to the base offer and paired it with a phased depot rollout.",
+    "pricing_approach": "Tiered pricing by deliveries per month with 24/7 support included in every tier.",
+    "key_response_points": [
+      "24/7 support with one-hour response SLA in the base price",
+      "Phased depot rollout",
+      "Dispatch integration approach",
+      "Tiered pricing by volume"
+    ],
+    "customer_objections": [
+      "We need 24/7 support",
+      "Standard support hours will not cover our early and late shifts"
+    ],
+    "outcome": "won",
+    "client_reason": "Including 24/7 support in the base price matched their operating reality, and the phased rollout reduced risk.",
+    "lessons_learned": "For logistics buyers, build 24/7 support with a response SLA into the base offer. Changing the strategy after the support objection turned a likely loss into a win."
+  },
+  {
+    "rfp_id": "RFP-023",
+    "date_closed": "2026-08-21",
+    "client_name": "Halvorsen Industrial Group",
+    "industry": "Manufacturing",
+    "company_size": "Enterprise",
+    "deal_size_usd": 500000,
+    "rfp_summary": "Halvorsen wanted heavily customised production workflows across several plants and needed a vendor comfortable with their unique processes.",
+    "key_requirements": [
+      "Custom workflows per plant",
+      "ERP and shop-floor integration",
+      "Scalability across plants",
+      "A workable timeline despite customisation"
+    ],
+    "customer_priorities": [
+      "Customisation",
+      "Manageable timeline and risk"
+    ],
+    "customer_concerns": [
+      "Customisation dragging the timeline out",
+      "Vendor cannot deliver complex custom work"
+    ],
+    "proposal_strategy": "We offered customisation but phased it: a standard core live in 12 weeks, then custom workflow modules in two later releases, each with acceptance criteria.",
+    "pricing_approach": "Fixed price per phase with custom modules scoped and priced separately.",
+    "key_response_points": [
+      "Standard core in 12 weeks",
+      "Custom modules in two scoped releases",
+      "Acceptance criteria per release",
+      "ERP integration plan"
+    ],
+    "customer_objections": [
+      "We need more customisation than a standard product offers",
+      "We worry customisation will make the timeline too long"
+    ],
+    "outcome": "won",
+    "client_reason": "The client accepted that customisation was needed and liked that it was phased with fixed prices, so value arrived early.",
+    "lessons_learned": "Enterprise manufacturers that want customisation will accept it if it is phased: deliver a standard core early and scoped custom modules in later releases with fixed pricing per phase."
+  },
+  {
+    "rfp_id": "RFP-024",
+    "date_closed": "2026-09-03",
+    "client_name": "Ferrous Dynamics",
+    "industry": "Manufacturing",
+    "company_size": "Enterprise",
+    "deal_size_usd": 460000,
+    "rfp_summary": "Ferrous Dynamics was evaluating an execution and quality platform and wanted it tailored to their steel production lines.",
+    "key_requirements": [
+      "Tailored workflows for steel production lines",
+      "ERP integration",
+      "Traceability for quality audits",
+      "Deployment within a year"
+    ],
+    "customer_priorities": [
+      "Fit to their processes",
+      "Reasonable time to value"
+    ],
+    "customer_concerns": [
+      "A long, risky customisation project",
+      "Production disruption during rollout"
+    ],
+    "proposal_strategy": "We promised full customisation of every workflow before go-live. The plan ran 14 months with a single big-bang launch.",
+    "pricing_approach": "Single large fixed price for the complete customised system.",
+    "key_response_points": [
+      "Complete customisation of all workflows",
+      "Fourteen-month implementation plan",
+      "Single big-bang go-live",
+      "Full traceability module"
+    ],
+    "customer_objections": [
+      "Your implementation timeline is too long",
+      "A big-bang launch is too risky for our production lines"
+    ],
+    "outcome": "lost",
+    "client_reason": "A competitor proposed a phased approach with value in the first quarter. Our 14-month big-bang plan felt too risky and too slow.",
+    "lessons_learned": "Full upfront customisation with a big-bang launch lost. Compare RFP-023, which won with phased customisation. In enterprise manufacturing, customisation must be phased, with early value and fixed price per phase."
+  },
+  {
+    "rfp_id": "RFP-025",
+    "date_closed": "2026-09-19",
+    "client_name": "Pinecrest Assurance Group",
+    "industry": "Insurance",
+    "company_size": "Enterprise",
+    "deal_size_usd": 275000,
+    "rfp_summary": "Pinecrest needed a policy servicing and underwriting workflow platform operating in several states, with tight compliance requirements and integration into the existing policy system.",
+    "key_requirements": [
+      "State-by-state regulatory compliance mapping",
+      "Audit logs and data retention controls",
+      "Integration with the policy administration system",
+      "Scalable workflow for peak renewal periods"
+    ],
+    "customer_priorities": [
+      "Compliance documentation",
+      "Integration reliability"
+    ],
+    "customer_concerns": [
+      "Vague vendor compliance answers",
+      "Integration risk with the policy system"
+    ],
+    "proposal_strategy": "We applied lessons from RFP-017 and RFP-001. The proposal opened with a compliance matrix mapped to each state, retention and audit detail, and a named-connector integration plan. Speed and AI features came after.",
+    "pricing_approach": "Fixed price with tiers by policy volume and a cap for renewal peaks.",
+    "key_response_points": [
+      "State-by-state compliance matrix",
+      "Audit log and retention documentation",
+      "Named connectors for the policy system",
+      "Volume tiers with a renewal-peak cap"
+    ],
+    "customer_objections": [
+      "We need detailed compliance documentation for each state",
+      "How will this integrate with our policy system?"
+    ],
+    "outcome": "won",
+    "client_reason": "The compliance team said the state-by-state matrix was the clearest they received, and the integration plan and price cap gave the rest of the committee confidence.",
+    "lessons_learned": "For enterprise insurance, lead with compliance mapped by state, then a concrete integration plan, then speed and AI features. Combining lessons from earlier wins and losses produced a clean win."
+  }
+]
