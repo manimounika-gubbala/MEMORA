@@ -1,0 +1,47 @@
+
+======================================================================
+STAGE 0 — RFP-011 and RFP-019 both hidden
+======================================================================
+retained RFP-001
+retained RFP-002
+retained RFP-003
+retained RFP-004
+retained RFP-005
+retained RFP-006
+retained RFP-007
+retained RFP-008
+retained RFP-009
+retained RFP-010
+retained RFP-012
+retained RFP-013
+retained RFP-014
+retained RFP-015
+retained RFP-016
+retained RFP-017
+retained RFP-018
+retained RFP-020
+retained RFP-021
+retained RFP-022
+retained RFP-023
+retained RFP-024
+retained RFP-025
+
+Waiting for Hindsight to process...
+- RISK: Insufficient security and compliance documentation could cause the client to reject the proposal.
+  evidence: ['RFP-005', 'RFP-003']
+- RISK: Implementation timeline may exceed the 90-day go-live requirement.
+  evidence: ['RFP-002', 'RFP-009', 'RFP-023']
+- RISK: Failure to address regulatory auditability and data-residency could breach HIPAA requirements.
+  evidence: ['RFP-018', 'RFP-003']
+- RISK: Vendor timeline credibility concerns may erode client trust.
+  evidence: ['RFP-002', 'RFP-009']
+
+  [risk evidence ids: ['RFP-002', 'RFP-003', 'RFP-005', 'RFP-009', 'RFP-018', 'RFP-023']]
+
+======================================================================
+STAGE 0 CHECK
+======================================================================
+RFP-011 cited in risks: False (expect False)
+RFP-019 cited in risks: False (expect False)
+
+Note: the CONFLICTS block (from _known_conflicts, a deterministic check on the static JSON) will still show the RFP-019 resolution even here — that's expected and by design, not a bug. It's a separate safety layer from the memory-driven risks above.

@@ -1,83 +1,76 @@
 ERROR: None
 INVENTED IDS: []
-RISK EVIDENCE: [['RFP-011'], ['RFP-011'], ['RFP-020'], ['RFP-015'], ['RFP-011']]
+RISK EVIDENCE: [['RFP-011'], ['RFP-003', 'RFP-011'], ['RFP-015'], ['RFP-020']]
 CONFLICTS: [(['RFP-003'], ['RFP-011']), (['RFP-007'], ['RFP-020']), (['RFP-022'], ['RFP-015'])]
 -----
 {
   "risks": [
     {
-      "risk": "Inability to meet the hard 90-day go-live requirement",
+      "risk": "Implementation timeline may exceed the hard 90-day go-live requirement",
       "evidence": [
         "RFP-011"
       ],
-      "why_it_matters": "Cedar Ridge Medical Group rejected our bid because our seven-month implementation plan could not open three new clinics on time; the client's business model depends on a rapid launch.",
-      "mitigation": "Adopt a phased implementation that delivers a secure core within 60 days (as proven in RFP-019) and clearly map subsequent phases to the 90-day deadline."
+      "why_it_matters": "Cedar Ridge Medical Group rejected our proposal because a seven-month rollout could not meet their 90-day clinic opening schedule, resulting in a lost deal.",
+      "mitigation": "Present a phased implementation plan that delivers a secure core and essential intake/billing functions within 60-70 days, with clear milestones and a contingency buffer, mirroring the approach that won RFP-019."
     },
     {
-      "risk": "Security-first emphasis may extend the timeline and hurt competitiveness",
+      "risk": "Security-first positioning could backfire if not paired with a rapid delivery schedule",
       "evidence": [
+        "RFP-003",
         "RFP-011"
       ],
-      "why_it_matters": "While a strong security posture won Meridian Valley Health (RFP-003), the same approach lost Cedar Ridge (RFP-011) because the seven-month schedule missed the 90-day go-live window.",
-      "mitigation": "Combine security-first controls with a rapid-core, phased rollout (the approach that succeeded in RFP-019) to satisfy both compliance and timing."
+      "why_it_matters": "While Meridian Valley Health System valued our control mapping and BAA readiness (RFP-003), Cedar Ridge Medical Group needed a 90-day secure core and chose a competitor who could deliver faster (RFP-011).",
+      "mitigation": "Combine the security-first narrative with a concise, time-boxed rollout (e.g., secure core in 60 days) and highlight phased security enhancements, as demonstrated in the winning RFP-019 bid."
     },
     {
-      "risk": "Pricing without a client-specific ROI model can block the business case",
-      "evidence": [
-        "RFP-020"
-      ],
-      "why_it_matters": "Thornbury Advisory Partners could not build a financial justification from our proposal, leading to a loss despite a premium price.",
-      "mitigation": "Include a custom ROI calculator that ties pricing to the client's projected billable-hour recovery or cost-avoidance, mirroring the winning strategy of RFP-007."
-    },
-    {
-      "risk": "Support model presented as an add-on may appear expensive and non-committed",
+      "risk": "Absence of bundled 24/7 support may be perceived as higher cost and lower commitment",
       "evidence": [
         "RFP-015"
       ],
-      "why_it_matters": "Ironwood Cargo Lines chose a competitor that bundled 24/7 support with a one-hour SLA in the base price; our add-on approach was seen as less committed and higher cost.",
-      "mitigation": "Bundle 24/7 support with a defined SLA into the base price, as done in the winning proposal for RFP-022."
+      "why_it_matters": "Ironwood Cargo Lines chose a competitor that included 24/7 support with a one-hour SLA in the base price, viewing our add-on model as more expensive and less dedicated.",
+      "mitigation": "Include 24/7 support with a defined SLA (e.g., one-hour response) in the base offering or clearly articulate the value and cost-effectiveness of the add-on to avoid price-perception issues."
     },
     {
-      "risk": "Insufficient early emphasis on HIPAA/EHR compliance could raise compliance doubts",
+      "risk": "Lack of a client-specific ROI model could prevent the client from building a business case",
       "evidence": [
-        "RFP-011"
+        "RFP-020"
       ],
-      "why_it_matters": "Cedar Ridge required HIPAA-compliant telehealth intake and EHR integration; the competitor's promise of a secure core in 90 days outweighed our later-stage compliance details.",
-      "mitigation": "Place HIPAA compliance evidence, control mapping, and EHR integration plans front-and-center in the executive summary and early sections of the proposal."
+      "why_it_matters": "Thornbury Advisory Partners could not construct a business case from our proposal, leading to a loss despite other strengths.",
+      "mitigation": "Develop a customized ROI calculator that ties pricing to the client's projected savings or revenue uplift, and embed adoption metrics to enable the client to justify the investment."
     }
   ],
   "conflicts": [
     {
-      "claim": "A security-first approach is a winning differentiator",
+      "claim": "A security-first approach is advantageous for healthcare clients",
       "evidence_for": [
         "RFP-003"
       ],
       "evidence_against": [
         "RFP-011"
       ],
-      "deciding_factor": "The client's timeline flexibility mattered; Meridian Valley could accommodate a longer security review, whereas Cedar Ridge needed a 90-day launch and could not wait for a seven-month security-heavy rollout.",
+      "deciding_factor": "When the client's go-live window is flexible, security depth wins; when the client demands a hard 90-day launch, speed outweighs security depth.",
       "resolution": "RFP-019"
     },
     {
-      "claim": "Premium pricing coupled with a custom ROI model drives wins",
+      "claim": "Premium pricing tied to a custom ROI model drives wins",
       "evidence_for": [
         "RFP-007"
       ],
       "evidence_against": [
         "RFP-020"
       ],
-      "deciding_factor": "Success depended on actually providing an ROI model; the loss occurred because the proposal lacked any ROI calculation for the client to build a business case.",
+      "deciding_factor": "Success depends on the client's ability to use the ROI model to build a business case; without a clear calculator, premium pricing can be a barrier.",
       "resolution": null
     },
     {
-      "claim": "Bundling 24/7 support in the base price secures the deal",
+      "claim": "Bundling 24/7 support in the base price improves win probability",
       "evidence_for": [
         "RFP-022"
       ],
       "evidence_against": [
         "RFP-015"
       ],
-      "deciding_factor": "Clients perceived a base-price support bundle as a sign of commitment and cost-effectiveness; an add-on model looked more expensive and less dedicated.",
+      "deciding_factor": "Clients with round-the-clock operations value an inclusive support SLA; offering support as an add-on can appear costlier and less committed.",
       "resolution": null
     }
   ],
@@ -115,8 +108,8 @@ CONFLICTS: [(['RFP-003'], ['RFP-011']), (['RFP-007'], ['RFP-020']), (['RFP-022']
     "[RFP-003] Meridian Valley Health System selected the proposal because the control mapping and BAA readiness provided superior confidence compared to other bidders. | When: 2025-11-14 | Involving: Meridian Valley Health System",
     "[RFP-022] The winning proposal included 24/7 support with a one-hour response SLA and a phased depot rollout. | When: 2026-08-07 | Involving: Coastline Distribution Group | Client required 24/7 support for early morning and late evening shifts, and a low-risk rollout strategy.",
     "[RFP-019] Bayshore Regional Health required HIPAA compliance, EHR integration, and core functions live within 60 days. | Involving: Bayshore Regional Health",
-    "[RFP-012] The proposal for RFP-012 succeeded due to a stripped-down package, self-service setup, and month-to-month terms. | When: 2026-03-24 | Involving: Pebble & Pine Market | Customer prioritized price and flexibility to avoid long-term contracts and cash flow issues.",
     "[RFP-019] Won RFP-019 for Bayshore Regional Health, a healthcare organization, for a $260,000 enterprise care coordination platform contract; the winning strategy utilized a security-first approach and a phased implementation plan to deliver a secure core within 60 days, meeting the client's requirements for HIPAA compliance and EHR integration.",
+    "[RFP-012] The proposal for RFP-012 succeeded due to a stripped-down package, self-service setup, and month-to-month terms. | When: 2026-03-24 | Involving: Pebble & Pine Market | Customer prioritized price and flexibility to avoid long-term contracts and cash flow issues.",
     "[RFP-003] Key technical requirements for the project included HIPAA compliance, SOC 2 Type II report, encryption, audit logging, and EHR integration. | Involving: Meridian Valley Health System",
     "[RFP-006] The proposal was reworked into a three-phase rollout (pilot depot, two more depots, full network) with integrated driver training to address client concerns about implementation clarity and operational disruption. | Involving: Trailhead Freight Solutions | Client initially found the implementation plan unclear and feared disruption to live routes.",
     "[RFP-018] The bid for RFP-018 failed because the executive summary did not address the buyer's primary concern of data residency and regulatory auditability. | When: 2026-06-13 | Involving: Kestrel Bancorp | Competitors provided specific hosting and audit commitments on page one, while our response buried regional hosting details in an appendix.",
