@@ -105,8 +105,8 @@ def gather_context(rfp: dict, per_query: int = 8) -> list[str]:
 
 
 PROMPT = """You are a bid strategist reviewing a NEW RFP before anyone writes a response.
-Use ONLY the past-bid memories below as evidence. Cite the RFP id (like RFP-011)
-for every claim. If no memory supports a point, do not make it up.Each memory starts with a tag such as [RFP-003] naming the bid it is about.
+Use ONLY the past-bid memories below as evidence. Cite the RFP id (like RFP-XXX)
+for every claim. If no memory supports a point, do not make it up.Each memory starts with a tag such as [RFP-XXX] naming the bid it is about.
 Cite an RFP id only from that tag. Never cite memories tagged [unattributed] or
 [mentions ...] as evidence for a specific bid. Never list the same RFP as both
 for and against the same claim.
@@ -128,11 +128,12 @@ the two bids disagreed:
 Return ONLY JSON in this shape:
 {{
   "risks": [
-    {{"risk": "...", "evidence": ["RFP-011"], "why_it_matters": "...", "mitigation": "..."}}
+    {{"risk": "...", "evidence": ["RFP-XXX"], "why_it_matters": "...", "mitigation": "..."}}
   ],
   "conflicts": [
-      {{"claim": "...", "evidence_for": ["RFP-003"], "evidence_against": ["RFP-011"], 
-"deciding_factor": "...", "resolution": "RFP-019 or null if unresolved"}}
+      {{"claim": "...", "evidence_for": ["RFP-XXX"], "evidence_against": ["RFP-YYY"], 
+"deciding_factor": "...", "resolution": "RFP-ZZZ
+ or null if unresolved"}}
     ]
 }}
 """
