@@ -89,6 +89,31 @@ def main():
         "even here — that's expected and by design, not a bug. It's a "
         "separate safety layer from the memory-driven risks above."
     )
+    
+    _section("STAGE 1 — Reveal RFP-011 (the failure)")
+    _hidden_ids.discard("RFP-011")
+
+    rfps = json.loads(memory.DATA_PATH.read_text(encoding="utf-8"))
+    rfp_011 = next(r for r in rfps if r["rfp_id"] == "RFP-011")
+    memory.client.retain(
+        bank_id=DEMO_BANK,
+        document_id="RFP-011",
+        update_mode="replace",
+        content=memory._rfp_to_text(rfp_011),
+        context=f"rfp outcome: {rfp_011['outcome']}",
+        timestamp=f"{rfp_011['date_closed']}T00:00:00Z",
+    )
+    print("retained RFP-011")
+    print("\nWaiting for Hindsight to process...")
+    time.sleep(30)
+
+    stage1 = agent.premortem(TEST_RFP)
+    _show(stage1)
+
+    _section("STAGE 1 CHECK")
+    stage1_ids = {e for r in stage1.get("risks", []) for e in r.get("evidence", [])}
+    print("RFP-011 cited in risks:", "RFP-011" in stage1_ids, "(expect True)")
+    print("RFP-019 cited in risks:", "RFP-019" in stage1_ids, "(expect False)")
 
 
 if __name__ == "__main__":

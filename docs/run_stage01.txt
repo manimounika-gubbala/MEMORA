@@ -1,0 +1,64 @@
+
+======================================================================
+STAGE 0 — RFP-011 and RFP-019 both hidden
+======================================================================
+retained RFP-001
+retained RFP-002
+retained RFP-003
+retained RFP-004
+retained RFP-005
+retained RFP-006
+retained RFP-007
+retained RFP-008
+retained RFP-009
+retained RFP-010
+retained RFP-012
+retained RFP-013
+retained RFP-014
+retained RFP-015
+retained RFP-016
+retained RFP-017
+retained RFP-018
+retained RFP-020
+retained RFP-021
+retained RFP-022
+retained RFP-023
+retained RFP-024
+retained RFP-025
+
+Waiting for Hindsight to process...
+- RISK: Implementation timeline may slip, threatening the 90-day go-live requirement.
+  evidence: ['RFP-002', 'RFP-023']
+- RISK: Data-security and HIPAA compliance gaps could cause the client to reject the solution.
+  evidence: ['RFP-005', 'RFP-018', 'RFP-003']
+- RISK: Client concerns that vendor timelines will slip, based on prior experiences.
+  evidence: ['RFP-002', 'RFP-009']
+
+  [risk evidence ids: ['RFP-002', 'RFP-003', 'RFP-005', 'RFP-009', 'RFP-018', 'RFP-023']]
+
+======================================================================
+STAGE 0 CHECK
+======================================================================
+RFP-011 cited in risks: False (expect False)
+RFP-019 cited in risks: False (expect False)
+
+Note: the CONFLICTS block (from _known_conflicts, a deterministic check on the static JSON) will still show the RFP-019 resolution even here — that's expected and by design, not a bug. It's a separate safety layer from the memory-driven risks above.
+
+======================================================================
+STAGE 1 — Reveal RFP-011 (the failure)
+======================================================================
+retained RFP-011
+
+Waiting for Hindsight to process...
+- RISK: Inability to meet the 90-day go-live deadline for the three new clinics
+  evidence: ['RFP-011']
+- RISK: Weak security documentation could trigger client concerns about HIPAA compliance and data protection
+  evidence: ['RFP-005', 'RFP-018']
+
+  [risk evidence ids: ['RFP-005', 'RFP-011', 'RFP-018']]
+
+======================================================================
+STAGE 1 CHECK
+======================================================================
+RFP-011 cited in risks: True (expect True)
+RFP-019 cited in risks: False (expect False)
