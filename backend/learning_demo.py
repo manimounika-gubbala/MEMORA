@@ -71,6 +71,13 @@ def _show(result):
 
 
 def main():
+    _section("RESET — clearing demo bank for a clean run")
+    try:
+        memory.client.delete_bank(bank_id=DEMO_BANK)
+        print(f"Deleted existing bank '{DEMO_BANK}'.")
+    except Exception as e:
+        print(f"No existing bank to delete (or delete failed): {e}")
+
     _section("STAGE 0 — RFP-011 and RFP-019 both hidden")
     memory.ingest_history(holdout_ids=("RFP-011", "RFP-019"))
     print("\nWaiting for Hindsight to process...")
@@ -115,6 +122,39 @@ def main():
     print("RFP-011 cited in risks:", "RFP-011" in stage1_ids, "(expect True)")
     print("RFP-019 cited in risks:", "RFP-019" in stage1_ids, "(expect False)")
 
+    
+    _section("STAGE 2 — Reveal RFP-019 (the resolution)")
+    _hidden_ids.discard("RFP-019")
+
+    rfp_019 = next(r for r in rfps if r["rfp_id"] == "RFP-019")
+    memory.client.retain(
+        bank_id=DEMO_BANK,
+        document_id="RFP-019",
+        update_mode="replace",
+        content=memory._rfp_to_text(rfp_019),
+        context=f"rfp outcome: {rfp_019['outcome']}",
+        timestamp=f"{rfp_019['date_closed']}T00:00:00Z",
+    )
+    print("retained RFP-019")
+    print("\nWaiting for Hindsight to process...")
+    time.sleep(30)
+
+    stage2 = agent.premortem(TEST_RFP)
+    _show(stage2)
+
+    _section("STAGE 2 CHECK")
+    stage2_ids = {e for r in stage2.get("risks", []) for e in r.get("evidence", [])}
+    print("RFP-011 cited in risks:", "RFP-011" in stage2_ids, "(expect True)")
+    print("RFP-019 cited in risks or mitigation:",
+          "RFP-019" in stage2_ids or
+          any("RFP-019" in r.get("mitigation", "") for r in stage2.get("risks", [])),
+          "(expect True)")
+
+    _section("FULL SUMMARY: What MEMORA learned")
+    print("Stage 0 (no history):    generic timeline risk, no specific precedent")
+    print("Stage 1 (+RFP-011):      specific risk citing the Cedar Ridge loss")
+    print("Stage 2 (+RFP-019):      mitigation should now reference the")
+    print("                         phased 60-day approach that won Bayshore")
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")

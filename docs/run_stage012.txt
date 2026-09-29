@@ -1,0 +1,98 @@
+
+======================================================================
+RESET — clearing demo bank for a clean run
+======================================================================
+Deleted existing bank 'memora-demo'.
+
+======================================================================
+STAGE 0 — RFP-011 and RFP-019 both hidden
+======================================================================
+retained RFP-001
+retained RFP-002
+retained RFP-003
+retained RFP-004
+retained RFP-005
+retained RFP-006
+retained RFP-007
+retained RFP-008
+retained RFP-009
+retained RFP-010
+retained RFP-012
+retained RFP-013
+retained RFP-014
+retained RFP-015
+retained RFP-016
+retained RFP-017
+retained RFP-018
+retained RFP-020
+retained RFP-021
+retained RFP-022
+retained RFP-023
+retained RFP-024
+retained RFP-025
+
+Waiting for Hindsight to process...
+- RISK: Inability to meet the 90-day go-live deadline
+  evidence: ['RFP-002', 'RFP-009']
+- RISK: Data-security concerns (HIPAA, encryption, audit logging)
+  evidence: ['RFP-005', 'RFP-003', 'RFP-014']
+- RISK: EHR integration complexity
+  evidence: ['RFP-003']
+
+  [risk evidence ids: ['RFP-002', 'RFP-003', 'RFP-005', 'RFP-009', 'RFP-014']]
+
+======================================================================
+STAGE 0 CHECK
+======================================================================
+RFP-011 cited in risks: False (expect False)
+RFP-019 cited in risks: False (expect False)
+
+Note: the CONFLICTS block (from _known_conflicts, a deterministic check on the static JSON) will still show the RFP-019 resolution even here — that's expected and by design, not a bug. It's a separate safety layer from the memory-driven risks above.
+
+======================================================================
+STAGE 1 — Reveal RFP-011 (the failure)
+======================================================================
+retained RFP-011
+
+Waiting for Hindsight to process...
+- RISK: Missing the 90-day go-live deadline
+  evidence: ['RFP-011']
+- RISK: Insufficient emphasis on HIPAA and security controls
+  evidence: ['RFP-003', 'RFP-011']
+- RISK: Pricing not aligned with mid-market budget expectations
+  evidence: ['RFP-002']
+
+  [risk evidence ids: ['RFP-002', 'RFP-003', 'RFP-011']]
+
+======================================================================
+STAGE 1 CHECK
+======================================================================
+RFP-011 cited in risks: True (expect True)
+RFP-019 cited in risks: False (expect False)
+
+======================================================================
+STAGE 2 — Reveal RFP-019 (the resolution)
+======================================================================
+retained RFP-019
+
+Waiting for Hindsight to process...
+- RISK: Implementation timeline may exceed the required 90-day go-live
+  evidence: ['RFP-011', 'RFP-002']
+- RISK: Data-security and HIPAA compliance concerns could lead to rejection
+  evidence: ['RFP-003', 'RFP-014', 'RFP-011']
+
+  [risk evidence ids: ['RFP-002', 'RFP-003', 'RFP-011', 'RFP-014']]
+
+======================================================================
+STAGE 2 CHECK
+======================================================================
+RFP-011 cited in risks: True (expect True)
+RFP-019 cited in risks or mitigation: True (expect True)
+
+======================================================================
+FULL SUMMARY: What MEMORA learned
+======================================================================
+Stage 0 (no history):    generic timeline risk, no specific precedent
+Stage 1 (+RFP-011):      specific risk citing the Cedar Ridge loss
+Stage 2 (+RFP-019):      mitigation should now reference the
+                         phased 60-day approach that won Bayshore
